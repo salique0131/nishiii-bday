@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Nishat Birthday Surprise 💙</title>
+
+<style>
+
+body{
+background:black;
+color:#00c6ff;
+font-family:monospace;
+text-align:center;
+padding-top:100px;
+}
+
+#main{
+display:none;
+font-family:Arial;
+background:linear-gradient(120deg,#1e3c72,#2a5298);
+height:100vh;
+color:white;
+padding-top:100px;
+}
+
+button{
+padding:12px 30px;
+font-size:20px;
+border:none;
+border-radius:10px;
+background:#00c6ff;
+color:white;
+cursor:pointer;
+}
+
+#final{
+display:none;
+font-size:26px;
+margin-top:30px;
+}
+
+.heart{
+position:absolute;
+font-size:20px;
+animation:float 6s linear infinite;
+}
+
+@keyframes float{
+from{transform:translateY(100vh);}
+to{transform:translateY(-10vh);}
+}
+
+</style>
+</head>
+
+<body>
+
+<div id="hack">
+<h1>Initializing Birthday Protocol...</h1>
+<p id="text">Accessing Nishat's Heart 💙</p>
+</div>
+
+<div id="main">
+
+<h1>🎂 Happy Birthday Nishat 💙</h1>
+
+<p>1 Year 11 Months of Love With You</p>
+
+<button onclick="showLove()">Open Your Surprise</button>
+
+<div id="final">
+💙 Nishat  
+
+These 1 year 11 months with you  
+have been the most beautiful time of my life.
+
+You are my happiness, my peace,  
+and the best thing that ever happened to me.
+
+I promise to stay with you and create  
+many more memories together.
+
+🎉 Happy Birthday My Love 🎉
+</div>
+
+</div>
+
+<script>
+
+setTimeout(()=>{
+document.getElementById("hack").style.display="none";
+document.getElementById("main").style.display="block";
+},4000);
+
+function showLove(){
+document.getElementById("final").style.display="block";
+}
+
+/* floating hearts */
+
+setInterval(function(){
+
+let heart=document.createElement("div");
+heart.className="heart";
+heart.innerHTML="💙";
+heart.style.left=Math.random()*100+"vw";
+
+document.getElementById("main").appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},6000);
+
+},500);
+
+</script>
+
+</body>
+
+</html>
